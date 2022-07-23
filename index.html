@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+</head>
+<body>
+    <style>
+
+        body{
+            background-color: rgba(10, 10, 10, 0.932);
+            color: whitesmoke;
+            font-family: 'Roboto',sans-serif;
+            /* font-family: 'Dongle',sans-serif; */
+    /* font-family: 'Source Sans Pro',sans-serif; */
+    
+    /* font-family: 'Ubuntu',sans-serif; */
+
+    /* margin: auto; */
+    /* font-family: 'Poppins',sans-serif; */
+    
+        }
+        .full-width{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 130px;
+            /* border: 1px solid red; */
+        }
+        .my-details{
+            width: 200px;
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid green; */
+            /* place-items: center; */
+            /* margin-right: 10px; */
+        }
+        .my-details > img{
+            margin-top: 10px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 0 0 20px black;
+        }
+        .icons-box{
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            /* place-items: center; */
+            width: 210px;
+            height: inherit;
+            /* border: 1px solid red; */
+        }
+        .github{
+            color:white
+        }
+        .github > svg{
+            fill: white;
+            filter: drop-shadow(0 0 10px white);
+        }
+        .static-box{
+            margin: 10px 0;
+            display: flex;
+            width: 100%;
+            height: 220px;
+            /* border: 1px solid black; */
+        }
+        .static-box > .title-box{
+            /* padding: 0 20px; */
+            display: grid;
+            place-items: center;
+            width:25%;
+            height: 220px;
+            animation: change 5s ease  infinite;
+            background-image: linear-gradient(45deg,rgb(233, 79, 156),rgb(39, 37, 37));
+                
+            /* border: 1px solid yellow; */
+            /* background-color: rgba(0, 0, 0, 0.842); */
+        }
+        .title-box >  h1{
+            width: 200px;
+            /* background-color: black; */
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: 700;
+            color: white;
+            /* border: 1px solid red; */
+        }
+        .sites{
+            display: flex;
+            align-items: center;
+            width: 75%;
+            height: 220px;
+            justify-content: center;
+            gap: 10px;
+            /* border: 1px solid red; */
+            
+        }
+        .sites > a {
+            display: grid;
+            place-items: center;
+            width: 240px;
+            height: 200px;
+            font-size: 20px;
+            box-shadow: 0 0 10px black;
+            /* border: 1px solid green; */
+            transition: all .5s;
+            animation-name: fade;
+            animation-duration: .2s;
+            animation-timing-function: linear;
+            font-weight: 700;
+            text-transform: capitalize;
+            
+        }
+        
+        .sites > a:nth-child(2){
+            animation-delay: .4s;
+        }
+        .sites > a:nth-child(3){
+            animation-delay: .5s;
+        }
+        .sites > a:nth-child(4){
+            animation-delay: .6s;
+        }
+        
+        .sites > a:hover{
+            background-color: rgb(233, 79, 156);
+            color: black;
+        }
+        
+        .dynamic-box{
+            width: 100%;
+            height:220px ;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            /* border: 1px solid yellow; */
+        }
+        .dynamic-box > .dynamic-title-box{
+            width:25% ;
+            height: inherit;
+            text-transform: capitalize;
+            /* background-color: gainsboro; */
+            display: grid;
+            place-items: center;
+            background-image: linear-gradient(45deg,rgb(255, 123, 0),black);
+            animation: change1 5s ease  infinite;
+            
+            
+        }
+        .my-name{
+            font-size: 23px;
+            font-weight: 100;
+        }
+        .web-app{
+            padding: 10px;
+            width: 75%;
+            height: inherit;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        .web-app > a{
+            width: 190px;
+            height:200px;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 0 10px black;
+            /* border: 1px solid green; */
+            transition: all .5s;
+            font-size: 20px;
+            animation: second;
+            animation-duration: 3s;
+            animation-timing-function:ease-in-out;
+            animation-delay: .5s;
+            text-transform: capitalize;
+            font-weight: 700;
+            /* animation-iteration-count: infinite; */
+            
+        }
+       
+        .web-app > a:hover{
+            background-color: rgb(255, 123, 0);
+            color: black;
+        }
+        
+        .control{
+                padding: 0 10px;
+            }
+        a{
+            text-decoration: none;
+        }
+        .web-app > a{
+            color: orange;
+            
+        }
+        .sites > a{
+            color: hotpink;
+        }
+        .mail{
+            color: white;
+            font-weight: bolder;
+        }
+        .mail:hover{
+            color: gray;
+        }
+       .arrow-right, .arrow-left{
+            display: none;
+        }
+
+        @media screen and (max-width:600px) {
+            .my-details{
+                margin-top: 10px;
+            }
+            .title-box >  h1 {
+                width: 120px;
+            }
+            
+            .full-width{
+                width: 100%;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                /* border: 1px solid red; */
+                margin: 20px 0;
+            }
+            .control{
+                padding: 0 10px;
+            }
+            .static-box{
+                margin: 50px 0;
+                width: 100%;
+                height: 170px;
+                /* border: 1px solid yellow; */
+                /* box-shadow: 0 0 20px black; */
+            }
+            .static-box >.title-box{
+                background-image: linear-gradient(45deg,rgb(233, 79, 156),rgb(39, 37, 37));
+                width: 140px;
+                height: 150px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .title-box > h1{
+                font-size: 19.5px;
+            }
+            .sites{
+                display: inline-block;
+                width: 80%;
+                height: 150px;
+                overflow-y: auto;
+                gap: 10px;
+                padding: 10px;
+                
+            }
+            ::-webkit-scrollbar{
+                display: none;
+            }
+            .sites > a {
+                /* display: inline-block; */
+                width:100%;
+                height: 100%;
+                margin-bottom: 10px;
+                color: white;
+                border: 1px solid hotpink;
+                box-shadow: 0 0 5px hotpink;
+                animation: none;
+                
+            }
+            
+            .dynamic-box{
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                width: 100%;
+                height: 150px;
+                margin: 20px 0;
+                box-shadow: 0 0 20px black;
+                /* border: 1px solid brown; */
+            }
+            .dynamic-box > .dynamic-title-box{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 150px;
+                height: inherit;
+                color: white;
+                /* border: 1px solid red; */
+                background-color: rgba(0, 0, 0, 0.842);
+            }
+            .dynamic-title-box > h1{
+                font-size:19.5px ;
+            }
+            .web-app{
+                display: block;
+                padding: 10px;
+                width:80% ;
+                height: 100%;
+                overflow-y: auto;
+                /* margin-bottom: 10px; */
+            }
+            .web-app > a{
+                /* margin: 10px 0; */
+                margin-bottom: 10px;
+                display: grid;
+                place-items: center;
+                width: 100%;
+                height: 100%;
+                border: 1px solid orange;
+                box-shadow: 0 0 5px orange;
+                animation: none;
+            }
+            .arrow-left{
+                display: block;
+
+            }
+            .arrow-left > svg{
+                width: 23px;
+                height: 23px;
+            }
+            .arrow-right{
+                display: block;
+            }
+            .arrow-right > svg{
+                transform: rotate(90deg);
+                width: 23px;
+                height: 23px;
+                
+            }
+
+        }
+        @keyframes change {
+            0%{
+                background-image: linear-gradient(45deg,rgb(233, 79, 156),rgb(39, 37, 37));
+            
+            }
+            50%{
+                background-image:linear-gradient(-45deg,rgb(2, 2, 2),rgb(233, 79, 156)) ;
+            }
+
+            to{
+                background-image: linear-gradient(45deg,rgb(39, 37, 37),rgb(233, 79, 156));
+
+            }
+            
+        }
+        @keyframes change1 {
+            0%{
+                background-image: linear-gradient(45deg,rgb(255, 123, 0),rgb(39, 37, 37));
+               
+            }
+            50%{
+                background-image:linear-gradient(-45deg,rgb(2, 2, 2),rgb(255, 123, 0)) ;
+            }
+
+            to{
+                background-image: linear-gradient(45deg,rgb(39, 37, 37),rgb(255, 123, 0));
+
+            }
+            
+            
+        }
+       
+        @keyframes fade{
+            from{
+                background-color: rgb(233, 79, 156);
+                color: white;
+                transform: scale(1.1);
+            }
+            to{
+                background-color: none;
+                color: rgb(233, 79, 156);
+            }
+        }
+        @keyframes second {
+            0%{
+                transform: translateX(-700px);
+                opacity: 0;
+                z-index: -2;
+                
+            }
+            20%{
+                opacity: .4;
+            }
+
+            100%{
+                transform: translate(0);
+                opacity: 1;
+                box-shadow: 0 0 10px rgb(255, 123, 0);
+            }
+            
+        }
+    </style>
+    <div class="control">
+        <div class="full-width">
+            <div class="my-details">
+                <img src="./img/myimg.jpg" alt="">
+                <h3 class="my-name">dinesh</h3>
+            </div>
+            <div class="icons-box">
+                <a href="https://github.com/Dineshmister" class="github">
+                    <svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z" />
+                    </svg>
+                </a>
+                <a href="mailto:dineshsmister@gmail.com" class="mail">dineshsmister@gmail.com</a>
+
+    
+            </div>
+            
+        </div>
+        <div class="static-box">
+            <div class="title-box">
+                <h1>Front end webdesigns</h1>
+                <span class="arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    
+                </span>
+            </div>
+            <div class="sites">
+                <a href="https://dineshmister.github.io/instaprofilereplica/">
+                        instaprofile
+                    
+                </a>
+                <a href="https://dineshmister.github.io/spotify/">
+                        spotify
+                        <!-- <a href="">instaprofile</a> -->
+                    
+                </a>
+                <a href="https://dineshmister.github.io/vscode/">
+                        vscode
+
+                    
+                </a>
+                <a href="https://dineshmister.github.io/landingpage/">
+                        landing page
+
+                    
+                </a>
+            </div>
+            
+        </div>
+        <div class="dynamic-box">
+            <div class="dynamic-title-box">
+                <h1>web apps</h1>
+                <span class="arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    
+                </span>
+            </div>
+            <div class="web-app">
+                    <a href="">codekalp</a>
+                    <a href="">jsondb</a>
+                
+            </div>
+            
+        </div>
+    
+    
+
+    </div>
+   
+</body>
+</html>
